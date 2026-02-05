@@ -76,8 +76,10 @@ const items = [
 
   return (
     <div className="main">
-      {items.map(function(elem){
-        return <Card name={elem.name} image={elem.imageUrl} desc={elem.description} rate={elem.price} category={elem.category} />
+      {items.map(function(elem, idx){
+        return <div key={idx}>
+          <Card name={elem.name} image={elem.imageUrl} desc={elem.description} rate={elem.price} category={elem.category} />
+        </div>
       })}
     </div>
   )
