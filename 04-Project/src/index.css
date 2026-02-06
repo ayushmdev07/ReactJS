@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+#flow::-webkit-scrollbar{
+    display: none;
+}
