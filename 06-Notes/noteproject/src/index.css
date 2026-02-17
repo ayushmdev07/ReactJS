@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+.flow::-webkit-scrollbar{
+    display: none;
+}
+.bgcustom{
+    background-image: url("./assets/Back.png");
+}
