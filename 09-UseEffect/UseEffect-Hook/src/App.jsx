@@ -1,34 +1,76 @@
+import React from 'react'
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect } from 'react'
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+
+
+
+  // const [num, setNum] = useState(0)
+  // const [num2, setNum2] = useState(0)
+  // useEffect(function(){
+  //   console.log("Use Efect Running ,...");
+
+  // },[num,num2])
+
+
+  // [] ek baar chalega only 
+  // [dependencies] - jab jab uska state change hoga
+
+
+
+  const [a, setA] = useState(0);
+  const [b, setB] = useState(0);
+
+  function changeA() {
+    console.log("A is changed");
+
+  }
+  function changeB() {
+    console.log("B is changed");
+
+  }
+
+
+  useEffect(function(){
+    console.log("Use Effect ");
+    changeA()
+  },[a])
+
+
+
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    // <div>
+    //   <button onClick={function temp(){
+    //     setNum(num+1)
+    //   }}
+    //   >Click Me</button>
+    //         <button onClick={function temp(){
+    //     setNum2(num2-1)
+    //   }}
+    //   >Click Me</button>
+    //   {num}, {num2}
+    // </div>
+
+
+
+    <div>
+      <h1>{a}</h1>
+      <h1>{b}</h1>
+
+      <button onClick={
+        function temp() {
+          setA(a + 1)
+        }
+      }>Change A</button>
+      <button onClick={
+        function temp() {
+          setB(b - 1)
+        }
+
+      }>Change B</button>
+    </div>
   )
 }
 
