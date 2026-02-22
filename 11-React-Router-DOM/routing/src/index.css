@@ -1,0 +1,27 @@
+body{
+    background-color: black;
+}
+*{
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-decoration: underline;
+}
+.dv{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    background-color: rgb(30, 63, 63);
+}
+.dv2{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
